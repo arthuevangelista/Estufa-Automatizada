@@ -1,0 +1,16 @@
+Micro e Micro - 2.2017
+
+Questoes Aula 02
+
+1_ Barramentos de dados são vetores cujos elementos podem assumir os valores lógicos '1' ou '0' e transmitem uma informação. Esta informaço pode ser armazenada em um registrador ou exibida em um componente periférico ou enviada a outro dispositivo. Já o barramento de endereço é um  vetor que indica a posição de determinado registrador ou área de memória. Geralmente o barramento de endereço é expresso em código hexadecimal.
+
+2_ Memória RAM (Random Access Memory) é uma memória volátil que registra e lê dados temporariamente. Ao se desligar a fonte de alimentação da memória RAM, os dados armazenados nesta unidade de memória são perdidos. RAM recebe este nome pois o acesso à informação era realizado de modo randômico. Memória ROM (Read-Only Memory) é uma memória não-volátil que apenas lê dados. A leitura de dados feita por meio de um barramento de dados, porém a escrita de dados pode ser por meio de raios UV, gravura elétrica ou feixes de laser. Quando delisgada, a ROM não perde os dados que haviam sido gravados.
+
+3_
+a) A variável 'i' é armazenada na RAM. Assim, esta variável poderá ser alterada toda vez que o usuário ligar o componente. Se fosse gravada na memória ROM, o valor de 'i' seria constante, não importando a entrada do usuário e não faria sentido.
+
+b) O código  gravado na ROM. Por via de regra, códigos e instruções são armazenadas na memória ROM pois constituem as instruções que devem ser realizadas pelo microcontrolador. Se fossem gravadas na memória RAM, a cada momento que o usuário ligasse o componente, deveria ser realizada uma nova escrita de dados para gravar as instruções.
+
+4_ ----------------------------------------------------------------
+Vantagens | Desvantagens
+----------------------------------------------------------------
