@@ -24,4 +24,4 @@ RAM e ROM compartilham barramentos de endereço e de data;
 Necessita de alguns ciclos de clock a mais para leitura de uma intrução e leitura/escrita de uma informação;
 Não faz distinção entre dados constantes ou variáveis.
 
-4_ O MSP430 fornece uma boa base para o estudo de microcontroladores. Pode ser programado em Assembly e C, pode ser debugado passo-a-passo (utilizando o CCS), há possibilidade de manipulação direta do clock e dos registradores e possui baixo consumo de energia.
+5_ O MSP430 fornece uma boa base para o estudo de microcontroladores. Pode ser programado em Assembly e C, pode ser debugado passo-a-passo (utilizando o CCS), há possibilidade de manipulação direta do clock e dos registradores e possui baixo consumo de energia.
