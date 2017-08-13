@@ -2,15 +2,46 @@ Micro e Micro - 2.2017
 
 Questoes Aula 02
 
-1_ Barramentos de dados são vetores cujos elementos podem assumir os valores lógicos '1' ou '0' e transmitem uma informação. Esta informaço pode ser armazenada em um registrador ou exibida em um componente periférico ou enviada a outro dispositivo. Já o barramento de endereço é um  vetor que indica a posição de determinado registrador ou área de memória. Geralmente o barramento de endereço é expresso em código hexadecimal.
+1_ Barramentos de dados são vetores de sinais cujos elementos transmitem uma informação. Esta informaço pode ser armazenada em um registrador, exibida em um componente periférico ou enviada a outro dispositivo. Já o barramento de endereço é um  vetor de sinais que indica a posição de determinado registrador ou área de memória. Um barramento de endereços pode ser de maior tamanho que um barramento de dados se for utilizada a arquitetura Harvard.
 
-2_ Memória RAM (Random Access Memory) é uma memória volátil que registra e lê dados temporariamente. Ao se desligar a fonte de alimentação da memória RAM, os dados armazenados nesta unidade de memória são perdidos. RAM recebe este nome pois o acesso à informação era realizado de modo randômico. Memória ROM (Read-Only Memory) é uma memória não-volátil que apenas lê dados. A leitura de dados feita por meio de um barramento de dados, porém a escrita de dados pode ser por meio de raios UV, gravura elétrica ou feixes de laser. Quando delisgada, a ROM não perde os dados que haviam sido gravados.
+2_ Memória RAM (Random Access Memory) é uma memória volátil que registra e lê dados temporariamente. Ao se desligar a fonte de alimentação da memória RAM, os dados armazenados nesta unidade de memória são perdidos. RAM recebe este nome pois o acesso à informação era realizado de modo randômico. Memória ROM (Read-Only Memory) é uma memória não-volátil que apenas lê dados. A leitura de dados feita por meio de um barramento de dados. A escrita de dados é mais complicada, podendo ser gravada no momento da manufatura (MROM), gravada eletricamente e apagável com uso de raios UV (EPROM), gravada e apagada eletricamente byte-a-byte (EEPROM) e gravada e apagada eletricamente por blocos (Flash). Quando delisgada, a ROM não perde os dados que haviam sido gravados.
 
 3_
-a) A variável 'i' é armazenada na RAM. Assim, esta variável poderá ser alterada toda vez que o usuário ligar o componente. Se fosse gravada na memória ROM, o valor de 'i' seria constante, não importando a entrada do usuário e não faria sentido.
+a) A variável 'i' é armazenada na RAM. Assim, esta variável poderá ser alterada toda vez que o usuário ligar o componente. Se fosse gravada na memória ROM, o valor de 'i' seria constante, não importando a entrada do usuário.
 
-b) O código  gravado na ROM. Por via de regra, códigos e instruções são armazenadas na memória ROM pois constituem as instruções que devem ser realizadas pelo microcontrolador. Se fossem gravadas na memória RAM, a cada momento que o usuário ligasse o componente, deveria ser realizada uma nova escrita de dados para gravar as instruções.
+b) O código é gravado na ROM. Por via de regra, códigos e instruções são armazenadas na memória ROM pois constituem as instruções que devem ser realizadas pelo microcontrolador. Se fossem gravadas na memória RAM, a cada momento que o usuário ligasse o componente, deveria ser realizada uma nova programação de instruções.
 
-4_ ----------------------------------------------------------------
-Vantagens | Desvantagens
-----------------------------------------------------------------
+4_
+Arquitetura Harvard
+
+Vantagens: Leitura simultânea de dados da RAM (armazenamento) e da ROM (operações); Otimização de barramento de dados pode ser realizada separadamente; Alta eficiência.
+Desvantagens: Necessita de uma instrução especial para armazenar constantes.
+
+Arquitetura von Neumann
+
+Vantagens: Arquitetura simples; Não há distinção entre sinais variáveis ou constantes;
+Desvantagens: Baixa eficiência; RAM e ROM compartilham barramentos de endereço e de data; Necessita de alguns ciclos de clock a mais para leitura de uma intrução e leitura/escrita de uma informação;
+
+5_ 
+a) No caso de ser Little-Endian, ficaria:
+-------------------
+| Dado | Endereço |
+-------------------
+| 0xCD |  0x0200  |
+| 0xAB |  0x0201  |
+| 0x51 |  0x0202  |
+| 0x80 |  0x0203  |
+
+b) No caso de ser Big-Endian, ficaria:
+-------------------
+| Dado | Endereço |
+-------------------
+| 0x80 |  0x0200  |
+| 0x51 |  0x0201  |
+| 0xAB |  0x0202  |
+| 0xCD |  0x0203  |
+
+6_ O MSP430 possui armazenamento na memória do tipo litte-endian. Portanto, palavras de 16 bits são registradas da seguinte forma: O byte menos significativo é armazenado no menor endereço e o byte mais significativo é armazenado no maior endereço. O mesmo ocorre com palavras de 32 bits. A soma de duas palavras de 32 bits ocorre:
+1. A soma dos bytes menos significativos (portanto, nos menores endereços) colocando (ou não) a flag carry em nível alto;
+2. A soma dos bytes intermediários com a flag carry;
+3. A soma dos bytes mais significativos (portanto, nos maiores endereços) com a flag carry. Se resultar em overflow, a flag carry é novamente ativada.
