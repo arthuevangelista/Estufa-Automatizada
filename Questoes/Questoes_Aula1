@@ -1,0 +1,27 @@
+Micro e Micro - 2.2017
+
+Questoes Aula 01
+
+1_ Sistemas Embarcados (termo traduzido do inglês "Embedded System") são sistemas que computam dados de entrada de acordo com especificações pré-determinadas. Diferem de PC's por serem mais simples, geralmente mais compactos e capazes de executar apenas a tarefa pré-determinada.
+
+2_ São sistemas que computam sinais de entrada por meio de um microprocessador. Sistemas compostos por um microprocessador, uma entrada de relógio, uma ou mais unidades de memória e componentes periféricos de modo geral são chamados de microcontroladores.
+
+3_
+a) ECU (engine control unit), controle de airbags, controle de alarme e portas, controle de janelas, computadores de bordo.
+
+b) Televisores, Máquinas de lavar louças/roupas, secadoras, geladeiras.
+
+c) Controladores de braços mecânicos, controle de servomotores, servidores, controle de monitoramento ambiental.
+
+4_
+Harvard:
+Leitura simultânea de dados da RAM (armazenamento) e da ROM (operações);
+Otimização de barramento de dados pode ser realizada separadamente;
+Necessita de uma instrução especial para armazenar constantes.
+
+Von Neumann:
+RAM e ROM compartilham barramentos de endereço e de data;
+Necessita de alguns ciclos de clock a mais para leitura de uma intrução e leitura/escrita de uma informação;
+Não faz distinção entre dados constantes ou variáveis.
+
+4_ O MSP430 fornece uma boa base para o estudo de microcontroladores. Pode ser programado em Assembly e C, pode ser debugado passo-a-passo (utilizando o CCS), há possibilidade de manipulação direta do clock e dos registradores e possui baixo consumo de energia.
