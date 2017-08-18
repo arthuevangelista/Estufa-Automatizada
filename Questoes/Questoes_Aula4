@@ -3,7 +3,60 @@ Micro e Micro - 2.2017
 Questoes Aula 04
 
 1_ 
-
+    a) mov.w #0, R4
+    
+    b) mov.w #1, R11
+       add.w R11, R5
+       
+    c) mov.w #1, R11
+       sub.w R11, R6
+       
+    d) mov.w #2, R11
+       add.w R11, R7
+       
+    e) mov.w #2, R11
+       sub.w R11, R8
 2_ 
+    a) clr.w R4
+    
+    b) inc.w R5
+    
+    c) dec.w R6
+    
+    d) incd.w R7
+    
+    e) decd.w R8
+3_                      ; Obs.: Não é possível realizar soma de um reg com ele mesmo?
 
-3_ 
+    a) mov.w R4, R15    ;
+       add.w R15, R4    ; f = f + f = 2 * f !
+       
+    b) mov.w R5, R15    ;
+       add.w R15, R5    ; g = g + g = 2 * g
+       add.w R15, R5    ; g = g + g + g = 3 * g !
+       
+    b) mov.w R5, R15    ;
+       add.w R15, R5    ; h = h + h = 2 * h
+       add.w R15, R5    ; h = h + h + h = 3 * h
+       add.w R15, R5    ; h = h + h + h + h = 4 * h !
+       
+    d) mov.w R10, R15   ; R15 = R10 <=> temp = A[1]
+       add.w R9, R15    ; R15 = R15 + R9 <=> temp += A[1]
+       mov.w R15, R11   ; R11 = R15 <=> A[2] = temp = A[1] + A[0]
+       
+    e) mov.w R4, R14    ;
+       add.w R4, R14    ; R14 = f + f = 2 * f !
+       mov.w R5, R15    ;
+       add.w R15, R5    ; h = h + h = 2 * h
+       add.w R15, R5    ; h = h + h + h = 3 * h
+       add.w R15, R5    ; h = h + h + h + h = 4 * h !
+       sub.w R5, R14    ; R14 = (R14 = 2 * f) sub (R5 = 4 * h)
+       mov.w R14, R12   ; R12 = A[3] = R14 = 2f - 4h
+       
+    f) mov.w R5, R15    ;
+       add.w R15, R5    ; h = h + h = 2 * h
+       mov.w R4, R14    ; R14 = f
+       sub.w R5, R14    ; R14 = f - 2h
+       mov.w R14, R13   ; R13 = R14
+       add.w R13, R14   ; R14 = R14 + R13 = 2 * R14
+       mov.w R14, R12   ; R12 = A[3] = R14 = 2(f - 2h)
