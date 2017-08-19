@@ -28,29 +28,29 @@ Questoes Aula 04
     e) decd.w R8
 3_ 
 
-    a) add.w R4, R4    ; f = f + f = 2 * f !
+    a) add.w R4, R4       ; f = f + f = 2 * f !
        
-    b) add.w R5, R5    ; g = g + g = 2 * g
-       add.w R5, R5    ; g = g + g + g = 3 * g !
+    b) add.w R5, R5       ; g = g + g = 2 * g
+       add.w R5, R5       ; g = g + g + g = 3 * g !
        
-    b) add.w R6, R6    ; h = h + h = 2 * h
-       add.w R6, R6    ; h = h + h + h = 3 * h
-       add.w R6, R6    ; h = h + h + h + h = 4 * h !
+    b) add.w R6, R6       ; h = h + h = 2 * h
+       add.w R6, R6       ; h = h + h + h = 3 * h
+       add.w R6, R6       ; h = h + h + h + h = 4 * h !
        
-    d) mov.w R10, R15   ; R15 = R10 <=> temp = A[1]
-       add.w R9, R15    ; R15 = R15 + R9 <=> temp += A[0]
-       mov.w R15, R11   ; R11 = R15 <=> A[2] = temp = A[1] + A[0]
+    d) mov.w 2(R9), R15   ; R15 = R10 <=> temp = A[1]
+       add.w R9, R15      ; R15 = R15 + R9 <=> temp += A[0]
+       mov.w R15, 4(R9)   ; R11 = R15 <=> A[2] = temp = A[1] + A[0]
        
-    e) add.w R4, R4    ; R4 = f + f = 2 * f !
-       mov.w R4, R14   ; R14 = 2f
-       add.w R6, R6    ; h = h + h = 2 * h
-       add.w R6, R6    ; h = h + h + h = 3 * h
-       add.w R6, R6    ; h = h + h + h + h = 4 * h !
-       sub.w R6, R14   ; R14 = (R14 = 2 * f) sub (R6 = 4 * h)
-       mov.w R14, R12  ; R12 = A[3] = R14 = 2f - 4h
+    e) add.w R4, R4       ; R4 = f + f = 2 * f !
+       mov.w R4, R14      ; R14 = 2f
+       add.w R6, R6       ; h = h + h = 2 * h
+       add.w R6, R6       ; h = h + h + h = 3 * h
+       add.w R6, R6       ; h = h + h + h + h = 4 * h !
+       sub.w R6, R14      ; R14 = (R14 = 2 * f) sub (R6 = 4 * h)
+       mov.w R14, 6(R9)   ; R12 = A[3] = R14 = 2f - 4h
        
-    f) add.w R6, R6    ; h = h + h = 2 * h
-       mov.w R4, R14    ; R14 = f
-       sub.w R6, R14    ; R14 = f - 2h
-       add.w R14, R14   ; R14 = R14 + R14 = 2 * R14
-       mov.w R14, R12   ; R12 = A[3] = R14 = 2(f - 2h)
+    f) add.w R6, R6       ; h = h + h = 2 * h
+       mov.w R4, R14      ; R14 = f
+       sub.w R6, R14      ; R14 = f - 2h
+       add.w R14, R14     ; R14 = R14 + R14 = 2 * R14
+       mov.w R14, 6(R9)   ; R12 = A[3] = R14 = 2(f - 2h)
