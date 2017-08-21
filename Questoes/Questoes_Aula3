@@ -3,18 +3,99 @@ Micro e Micro - 2.2017
 Questoes Aula 03
 
 1_ 
-    a)
-    b)
-    c)
-    d)
-    e)
-    f)
+    a) a |= BIT7;
+    
+    b) a |= (BIT6 + BIT7);
+       
+    c) a &= ~BIT5;
+    
+    d) a &= ~(BIT4 + BIT5);
+       
+    e) a ^= BIT0;
+    
+    f) a ^= 0xF0;
+       a |= 0x0F;
+
 2_ 
+
+#include<msp430g2553.h>
+
+void main(void){
+    WDTCTL = WDTPW|WDTHOLD;
+    P1DIR = 0x41;
+    P1OUT = 0x41; // Liga os dois LEDs
+    for(;;){
+        P1OUT ^= 0x41; // Toggle nos LEDs
+    }
+}
 
 3_ 
 
+#include<msp430g2553.h>
+#define ligar 0x41 // P1.6 e P1.7 são os LEDs
+#define btn BIT2 // P1.2 é o push-button
+
+void main(void){
+    WDTCTL = WDTPW|WDTHOLD;
+    P1DIR = 0x41;
+    P1OUT = 0; // LEDs iniciam desligados
+    for(;;){
+        if((P1IN & btn) == 0){
+            // Não faz nada
+        }else{
+            P1OUT ^= 0x41; // Liga os LEDs
+            P1OUT ^= 0x41; // Desliga
+            P1OUT ^= 0x41; // Liga pela segunda vez
+            P1OUT ^= 0x41; // Desliga
+            }
+    }
+}
+
 4_ 
+
+#include<msp430g2553.h>
+
+void main(void){
+    WDTCTL = WDTPW|WDTHOLD;
+    P1DIR = 0x41;
+    P1OUT = 0x41; // Liga os dois LEDs
+    P1OUT ^= 0x41; // Desliga
+    for(;;){
+    }
+}
 
 5_ 
 
+#include<msp430g2553.h>
+
+void main(void){
+    WDTCTL = WDTPW|WDTHOLD;
+    P1DIR = 0x41;
+    P1OUT = 0; // Começa desligado
+    for(;;){
+        P1OUT = 0x41; // Liga os dois LEDs
+        P1OUT ^= 0x41; // Desliga
+    }
+}
+
 6_ 
+
+#include<msp430g2553.h>
+#define ligar 0x41 // P1.6 e P1.7 são os LEDs
+#define btn BIT2 // P1.2 é o push-button
+
+void main(void){
+    WDTCTL = WDTPW|WDTHOLD;
+    P1DIR = 0x41;
+    P1OUT = 0; // LEDs iniciam desligados
+    for(;;){
+        if((P1IN & btn) == 0){
+            // Não faz nada
+        }else{
+            P1OUT = 0x41; // Liga os LEDs
+            P1OUT ^= 0x41; // Desliga
+            P1OUT = 0x41; // Liga pela segunda vez
+            P1OUT ^= 0x41; // Desliga
+            }
+    }
+}
