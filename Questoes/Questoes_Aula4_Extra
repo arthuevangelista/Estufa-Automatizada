@@ -3,4 +3,46 @@ Micro e Micro - 2.2017
 Questoes Aula 04 (Extra)
 
 1_ 
-    a) 
+    a) add.w R4, R4
+       add.w R4, R4
+       add.w R4, R4
+       add.w R4, R4       ; f = 5 * f
+       
+    b) add.w R5, R5
+       add.w R5, R5
+       add.w R5, R5
+       add.w R5, R5
+       add.w R5, R5       ; g = 6 * g
+       
+    c) mov.w 2(R9), R15   ; R15 = R10 <=> temp = A[1]
+       add.w R15, R15     ; R15 = 2 * A[1]
+       add.w R15, R15     ; R15 = 3 * A[1]
+       add.w R15, R15     ; R15 = 4 * A[1]
+       add.w R15, R15     ; R15 = 5 * A[1]
+       add.w R15, R15     ; R15 = 6 * A[1]
+       add.w R9, R9       ; R9 = 2 * A[0]
+       add.w R9, R9       ; R9 = 3 * A[0]
+       add.w R9, R9       ; R9 = 4 * A[0]
+       add.w R9, R9       ; R9 = 5 * A[0]
+       add.w R9, R15      ; R15 = R15 + R9 <=> R15 = 6 * A[1] + 5 * A[0]
+       mov.w R15, 4(R9)   ; R11 = R15 <=> A[2] = R15 = 6 * A[1] + 5 * A[0]
+        
+    d) add.w R4, R4       ; R4 = 2 * f
+       add.w R4, R4       ; R4 = 3 * f
+       mov.w R4, R14      ; R14 = 3f
+       add.w R6, R6       ; h = 2 * h
+       add.w R6, R6       ; h = 3 * h
+       add.w R6, R6       ; h = 4 * h
+       add.w R6, R6       ; h = 5 * h
+       sub.w R6, R14      ; R14 = (R14 = 3 * f) sub (R6 = 5 * h)
+       mov.w R14, 6(R9)   ; R12 = A[3] = R14 = 3f - 5h
+       
+    e) add.w R6, R6       ; h = 2 * h
+       mov.w R4, R14      ; R14 = f
+       sub.w R6, R14      ; R14 = f - 2h
+       add.w R14, R14     ; R14 = R14 + R14 = 2 * R14
+       add.w R14, R14     ; R14 = R14 + R14 = 3 * R14
+       add.w R14, R14     ; R14 = R14 + R14 = 4 * R14
+       add.w R14, R14     ; R14 = R14 + R14 = 5 * R14
+       add.w R14, R14     ; R14 = R14 + R14 = 6 * R14
+       mov.w R14, 6(R9)   ; R12 = A[3] = R14 = 6(f - 2h)
