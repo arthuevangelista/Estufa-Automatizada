@@ -33,3 +33,7 @@ Micro e Micro - 2.2017
 > Dúvida: Entrada de dados no sistema;
 
 > Banco de dados ficaria armazenado em um dispositivo flash externo ao microcontrolador. Listas encadeadas podem ser uma boa abordagem para guardar elementos, adicionar/remover elementos e etc do banco de dados. **CUIDADO!** Listas são realizadas com alocação dinâmica de memória (pode dar problema na memória RAM do MSP430 se não for especificado que a lista deve estar na memo flash);
+
+> Buscar referência na linha 8;
+Buscar referências quanto a estatísticas úteis em uma estufa/lavoura na linha 14;
+Buscar referências sobre Relé e Válvula Solenóide;
