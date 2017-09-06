@@ -5,7 +5,7 @@ Micro e Micro - 2.2017
 ## Projeto de Automação com MSP430
 
 * **Justificativa**
-    * O controle hídrico em lavoures, jardins residenciais e estufas tem papel fundamental nas finanças de uma empresa ou residência. Estima-se que boa parte dos gastos com água potável são devido estas atividades. Em uma situação de crise hídrica como a atual e o preço da água se elevando a cada dia, uma empresa ou residência com controle de seus gastos hídricos obtém vantagem expressiva.
+    * O controle hídrico em lavouras, jardins residenciais e estufas tem papel fundamental nas finanças de uma empresa ou residência. Estima-se que boa parte dos gastos com água potável são devido estas atividades. Em uma situação de crise hídrica como a atual e o preço da água se elevando a cada dia, uma empresa ou residência com controle de seus gastos hídricos obtém vantagem expressiva.
 
 * **Objetivos**
     * Economia de água devido a automação do ambiente;
