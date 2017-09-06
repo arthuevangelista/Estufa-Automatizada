@@ -14,7 +14,7 @@ Projeto de Automação com MSP430
 
 > Ver se tem como linkar com ASP.NET framework e Excel;
 
-    # Justificativa
+    Justificativa
         O controle hídrico em lavoures, jardins residenciais e estufas tem papel fundamental nas finanças de uma empresa ou residência. Estima-se que boa parte dos gastos com água potável são devido estas atividades. Em uma situação de crise hídrica como a atual e o preço da água se elevando a cada dia, uma empresa ou residência com controle de seus gastos hídricos obtém vantagem expressiva.
 
 > Uso da opção de low-power mode do MSP430 pode oferecer vantagem nos momentos em que não estiver sendo utilizado;
