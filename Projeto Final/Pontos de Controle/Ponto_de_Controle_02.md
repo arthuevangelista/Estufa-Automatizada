@@ -1,10 +1,10 @@
-* Utilizar módulo sensor de umidade do solo (umidostato)
+* **Utilizar módulo sensor de umidade do solo (umidostato)**
 
-** Possui formato de garfo (apenas duas pontas que deverão estar fincadas no solo). Ao identificar umidade ocorrerá uma diferença de potencial entre as pontas do garfo. A corrente que passará entre as duas pontas é muito pequena (resistência próxima dos M ohm).
+	* Possui formato de garfo (apenas duas pontas que deverão estar fincadas no solo). Ao identificar umidade ocorrerá uma diferença de potencial entre as pontas do garfo. A corrente que passará entre as duas pontas é muito pequena (resistência próxima dos M ohm).
 
-** Quanto maior a resistência, menor a umidade entre as ponteiras. A corrente, portanto, é muito baixa para que se insira o sensor diretamente na porta analógica do micro. É necesário o uso de um módulo comparador.
+	* Quanto maior a resistência, menor a umidade entre as ponteiras. A corrente, portanto, é muito baixa para que se insira o sensor diretamente na porta analógica do micro. É necesário o uso de um módulo comparador.
 
-*** Nada mais é que um amplificador operacional em modo comparador. Quando comprado o sensor, o comparador LM393 (low offset voltage dual comparator) vem no conjunto.
+		* Nada mais é que um amplificador operacional em modo comparador. Quando comprado o sensor, o comparador LM393 (low offset voltage dual comparator) vem no conjunto.
 
 *** A tensão de trabalho é de 3,3 V a 5 V. O comparador tem quatro pinos: Vcc, GND, D0 (digital) e A0 (analógico). Para usar a saída digital é necessário utilizar o potenciômetro para calibrar o sensor.
 
