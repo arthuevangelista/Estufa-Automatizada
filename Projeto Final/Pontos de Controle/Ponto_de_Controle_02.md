@@ -14,18 +14,18 @@
 
 		* Utilizar uma porta analógica para leitura de dados seria mais preciso, mas exigira um processamento do sinal analógico antes deste ser inserido no microcontrolador (i.e. uma média móvel dos valores para evitar ruído/sinal aleatório).
 
-LINK PARA SENSOR: https://www.filipeflop.com/produto/sensor-de-umidade-do-solo-higrometro/
+> **LINK PARA SENSOR: https://www.filipeflop.com/produto/sensor-de-umidade-do-solo-higrometro/**
 
-	* Para visualização dos dados (umidade do ar, umidade do solo e temperatura) será utilizado um display. Dependendo da temperatura será ativado um exaustor (resfriar a estufa) ou uma lâmpada (aquecer a estufa); Da umidade do ar/solo serão ligadas as válvulas de irrigação.
+* Para visualização dos dados (umidade do ar, umidade do solo e temperatura) será utilizado um display. Dependendo da temperatura será ativado um exaustor (resfriar a estufa) ou uma lâmpada (aquecer a estufa); Da umidade do ar/solo serão ligadas as válvulas de irrigação.
 
-		* Possui uma biblioteca na IDE do arduino #include<LiquidCrystal.h>
+	* Possui uma biblioteca na IDE do arduino #include<LiquidCrystal.h>
 
-	* O sensor DHT11 é responsável por realizar a medição de umidade relativa do ar (usando um sensor do tipo HR202 (entre 20% e 90%)) e da temperatura (usando um termistor NTC (entre 0 e 50 C)). Possui quatro pinos: Vcc, GND, Dados () e N.C ()
+* O sensor DHT11 é responsável por realizar a medição de umidade relativa do ar (usando um sensor do tipo HR202 (entre 20% e 90%)) e da temperatura (usando um termistor NTC (entre 0 e 50 C)). Possui quatro pinos: Vcc, GND, Dados () e N.C ()
 
-		* Possui uma biblioteca própria #include<dht.h>
+	* Possui uma biblioteca própria #include<dht.h>
 
-		* Utiliza dois pinos para enviar os dados para o Microcontrolador (ambos analógicos). Para escrever os dados no display, é necessário separar os digitos.
+	* Utiliza dois pinos para enviar os dados para o Microcontrolador (ambos analógicos). Para escrever os dados no display, é necessário separar os digitos.
 
-		* É necessário um delay entre uma leitura e a outra (o micro enviará um sinal avisando que está em modo de leitura e o DHT11 enviará outro sinal indicando que está enviando dados).
+	* É necessário um delay entre uma leitura e a outra (o micro enviará um sinal avisando que está em modo de leitura e o DHT11 enviará outro sinal indicando que está enviando dados).
 
-LINK PARA SENSOR: https://www.filipeflop.com/produto/sensor-de-umidade-e-temperatura-dht11/
+> **LINK PARA SENSOR: https://www.filipeflop.com/produto/sensor-de-umidade-e-temperatura-dht11/**
