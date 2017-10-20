@@ -27,5 +27,18 @@
 	* Utiliza dois pinos para enviar os dados para o Microcontrolador (ambos analógicos). Para escrever os dados no display, é necessário separar os digitos.
 
 	* É necessário um delay entre uma leitura e a outra (o micro enviará um sinal avisando que está em modo de leitura e o DHT11 enviará outro sinal indicando que está enviando dados).
+	
+	* Possui uma biblioteca para msp430 disponível no link do github a seguir: https://github.com/bafeigum/DHT11-Library-for-MSP430
+	
+	* Para utilizar esta biblioteca  necessrio o uso de um timer e uma interrupção, uma vez que a leitura e escrita exigem um delay entre a comunicação com a placa.
+		* Precisa estar setado em UP mode e contando a cada 250 kHz (pode-se utilizar o SMCLOCK sendo /4;
+		* ISR seta um volatile unsigned char TOUT no TA0. Esse ISR também deverá dar clear na interrupt flag, setando CCIFG no registrador TACCL0;
+		* São enviados 5 elementos de um vetor (chamado packet) para o MSP430:
+			* packet[0] = primeiro byte de umidade
+			* packet[1] = segundo byte de umidade (deve ser ZERO)
+			* packet[2] = primeiro byte de temperatura
+			* packet[3] = segundo byte de temperatura (deve ser ZERO)
+			* packet[4] = byte da soma dos 4 bytes anteriores (usado para checagem dos dados (em caso de falha na comunicação))
+	
 
 > **LINK PARA SENSOR: https://www.filipeflop.com/produto/sensor-de-umidade-e-temperatura-dht11/**
