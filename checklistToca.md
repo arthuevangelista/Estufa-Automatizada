@@ -1,0 +1,44 @@
+checklist do que vai pra competição
+
+    - [ ] Primeiro item
+    - [X] Ferramenta y
+    - [ ] Ciano
+    - [ ] Epoxi (todos os tubos
+    - [ ] Acelerador de Ciano
+    - [ ] Balsas (todas que tiver)
+    - [ ] Compensado
+    - [ ] Fita Durex
+    - [ ] Furadeira de bateria
+    - [ ] Dremel
+    - [ ] Estiletes
+    - [ ] Bisturi
+    - [ ] Parafusos e Porcas diversos tamanhos
+    - [ ] Furadeira Makita
+    - [ ] Alicate de Pressão
+    - [ ] Alicate de Corte
+    - [ ] Pistola e varetas de Cola Quente
+    - [ ] Soprador Térmico
+    - [ ] Morsa
+    - [ ] Sargentos
+    - [ ] Tecido de Carbono
+    - [ ] Sargentos
+    - [ ] Estilete
+    - [ ] Serra de Balsa
+    - [ ] Bisturi
+    - [ ] Regua
+    - [ ] Conjunto de Chaves Allen
+    - [ ] Conjunto de Chaves de Boca
+    - [ ] Conjunto de Chaves Canhao
+    - [ ] Carregador de Baterias
+    - [ ] Emitter
+    - [ ] Furadeira de Bancada
+    - [ ] Ferros de Solda
+    - [ ] Mesa de Laminação
+    - [ ] Martelo
+    - [ ] Chaves de Fenda e Phillips
+    - [ ] Conjunto de Brocas
+    - [ ] Cegueta
+    - [ ] Ferrinho de Entelagem e Transformador
+    - [ ] Entelagem Monokote
+    - [ ] Nivel
+    - [ ] Balança
