@@ -16,9 +16,9 @@ Micro e Micro - 2.2017
 
 > **LINK PARA DATASHEET DO BS170: https://www.onsemi.com/pub/Collateral/BS170-D.PDF**
 
-	* **Módulo relé 4 canais**
-		* Será utilizado um módulo com 4 relés para controle dos dispositivos com tensão de 12V e corrente
-	* **Módulo sensor de umidade do solo (umidostato)**
+   * **Módulo relé 4 canais**
+       * Será utilizado um módulo com 4 relés para controle dos dispositivos com tensão de 12V e corrente
+    * **Módulo sensor de umidade do solo (umidostato)**
 
 		* Possui formato de garfo (apenas duas pontas que deverão estar fincadas no solo). Ao identificar umidade ocorrerá uma diferença de potencial entre as pontas do garfo. A corrente que passará entre as duas pontas é muito pequena (resistência próxima dos M ohm).
 
@@ -34,8 +34,8 @@ Micro e Micro - 2.2017
 
 			* Utilizar uma porta analógica para leitura de dados seria mais preciso, mas exigira um processamento do sinal analógico antes deste ser inserido no microcontrolador (i.e. uma média móvel dos valores para evitar ruído/sinal aleatório).
 
-	**REFERÊNCIAS**
-	> **LINK PARA SENSOR: https://www.filipeflop.com/produto/sensor-de-umidade-do-solo-higrometro/
+**REFERÊNCIAS**
+> **LINK PARA SENSOR: https://www.filipeflop.com/produto/sensor-de-umidade-do-solo-higrometro/
 	LINK PARA O DATASHEET DO LM393: http://www.ti.com/lit/ds/symlink/lm293.pdf**
 
 	* Para visualização dos dados (umidade do ar, umidade do solo e temperatura) será utilizado um display. Dependendo da temperatura será ativado um exaustor (resfriar a estufa) ou uma lâmpada (aquecer a estufa); Da umidade do ar/solo serão ligadas as válvulas de irrigação.
@@ -64,6 +64,6 @@ Micro e Micro - 2.2017
 				* packet[3] = segundo byte de temperatura (deve ser ZERO)
 				* packet[4] = byte da soma dos 4 bytes anteriores (usado para checagem dos dados (em caso de falha na comunicação))
 
-
-	> **LINK PARA SENSOR: https://www.filipeflop.com/produto/sensor-de-umidade-e-temperatura-dht11/
+**REFERÊNCIAS**
+> **LINK PARA SENSOR: https://www.filipeflop.com/produto/sensor-de-umidade-e-temperatura-dht11/
 	LINK PARA O DATASHEET DO DHT11: http://img.filipeflop.com/files/download/Datasheet_DHT11.pdf**
