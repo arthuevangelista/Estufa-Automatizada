@@ -14,7 +14,7 @@ Micro e Micro - 2.2017
 		* Imagem do esquemático do componente abaixo.
 		* Testes foram realizados com este componente para verificar se ele funciona e quais os níveis de tensão em sua saída. Houve também uma preocupação quanto à frequência máxima de operação, uma vez que este componente será utilizado na saída de todos os sensores e nas saídas do MSP430. Foi confirmada o nível de ruído apresentado na saída do level-shifter à partir de Hz, de acordo com a informação do datasheet do componente transistor BS170. As imagens abaixo mostram os resultados obtidos nos testes com osciloscópio.
 
-    > **LINK PARA DATASHEET DO BS170: **
+> **LINK PARA DATASHEET DO BS170: https://www.onsemi.com/pub/Collateral/BS170-D.PDF**
 	* **Módulo relé 4 canais**
 		* Será utilizado um módulo com 4 relés para controle dos dispositivos com tensão de 12V e corrente
 	* **Módulo sensor de umidade do solo (umidostato)**
@@ -34,8 +34,8 @@ Micro e Micro - 2.2017
 			* Utilizar uma porta analógica para leitura de dados seria mais preciso, mas exigira um processamento do sinal analógico antes deste ser inserido no microcontrolador (i.e. uma média móvel dos valores para evitar ruído/sinal aleatório).
 
 	**REFERÊNCIAS**
-	> **LINK PARA SENSOR: https://www.filipeflop.com/produto/sensor-de-umidade-do-solo-higrometro/**
-	> **LINK PARA O DATASHEET DO LM393: http://www.ti.com/lit/ds/symlink/lm293.pdf**
+	> **LINK PARA SENSOR: https://www.filipeflop.com/produto/sensor-de-umidade-do-solo-higrometro/
+	LINK PARA O DATASHEET DO LM393: http://www.ti.com/lit/ds/symlink/lm293.pdf**
 
 	* Para visualização dos dados (umidade do ar, umidade do solo e temperatura) será utilizado um display. Dependendo da temperatura será ativado um exaustor (resfriar a estufa) ou uma lâmpada (aquecer a estufa); Da umidade do ar/solo serão ligadas as válvulas de irrigação.
 
@@ -64,5 +64,5 @@ Micro e Micro - 2.2017
 				* packet[4] = byte da soma dos 4 bytes anteriores (usado para checagem dos dados (em caso de falha na comunicação))
 
 
-	> **LINK PARA SENSOR: https://www.filipeflop.com/produto/sensor-de-umidade-e-temperatura-dht11/**
-	> **LINK PARA O DATASHEET DO DHT11: http://img.filipeflop.com/files/download/Datasheet_DHT11.pdf**
+	> **LINK PARA SENSOR: https://www.filipeflop.com/produto/sensor-de-umidade-e-temperatura-dht11/
+	LINK PARA O DATASHEET DO DHT11: http://img.filipeflop.com/files/download/Datasheet_DHT11.pdf**
