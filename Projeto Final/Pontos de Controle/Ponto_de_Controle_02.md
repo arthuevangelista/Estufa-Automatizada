@@ -15,6 +15,7 @@ Micro e Micro - 2.2017
 		* Testes foram realizados com este componente para verificar se ele funciona e quais os níveis de tensão em sua saída. Houve também uma preocupação quanto à frequência máxima de operação, uma vez que este componente será utilizado na saída de todos os sensores e nas saídas do MSP430. Foi confirmada o nível de ruído apresentado na saída do level-shifter à partir de Hz, de acordo com a informação do datasheet do componente transistor BS170. As imagens abaixo mostram os resultados obtidos nos testes com osciloscópio.
 
 > **LINK PARA DATASHEET DO BS170: https://www.onsemi.com/pub/Collateral/BS170-D.PDF**
+
 	* **Módulo relé 4 canais**
 		* Será utilizado um módulo com 4 relés para controle dos dispositivos com tensão de 12V e corrente
 	* **Módulo sensor de umidade do solo (umidostato)**
