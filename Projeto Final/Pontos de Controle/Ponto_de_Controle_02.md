@@ -38,6 +38,7 @@ Micro e Micro - 2.2017
 > **LINK PARA SENSOR: https://www.filipeflop.com/produto/sensor-de-umidade-do-solo-higrometro/
 	LINK PARA O DATASHEET DO LM393: http://www.ti.com/lit/ds/symlink/lm293.pdf**
 
+
 	* Para visualização dos dados (umidade do ar, umidade do solo e temperatura) será utilizado um display. Dependendo da temperatura será ativado um exaustor (resfriar a estufa) ou uma lâmpada (aquecer a estufa); Da umidade do ar/solo serão ligadas as válvulas de irrigação.
 
 		* Possui uma biblioteca na IDE do arduino #include<LiquidCrystal.h>
